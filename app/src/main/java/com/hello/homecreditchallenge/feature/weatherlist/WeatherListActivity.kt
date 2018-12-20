@@ -1,18 +1,18 @@
-package com.hello.homecreditchallenge
+package com.hello.homecreditchallenge.feature.weatherlist
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
+import com.hello.homecreditchallenge.R
+import kotlinx.android.synthetic.main.activity_weather_list.*
 
-import kotlinx.android.synthetic.main.activity_main.*
-
-class MainActivity : AppCompatActivity() {
+class WeatherListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_weather_list)
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
