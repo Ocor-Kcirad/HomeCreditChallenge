@@ -13,9 +13,9 @@ import io.reactivex.schedulers.Schedulers
 class WeatherListViewModel : ViewModel() {
 
   companion object {
-    private const val LONDON = 2643743
-    private const val KEIV = 703448
-    private const val MOSCOW = 524901
+    private const val LONDON = "2643743"
+    private const val KEIV = "703448"
+    private const val MOSCOW = "524901"
   }
 
   val weathers: LiveData<List<WeatherData>> get() = weatherListLiveData
@@ -26,11 +26,12 @@ class WeatherListViewModel : ViewModel() {
   private val disposables = CompositeDisposable()
 
   init {
-    loadWeatherData()
+    loadCitiesWeatherData()
   }
 
-  fun loadWeatherData() {
-    disposables.add(ApiClient.getWeatherData(MOSCOW, KEIV, LONDON)
+  fun loadCitiesWeatherData() {
+    disposables.add(
+        ApiClient.getCitiesWeatherData(MOSCOW, KEIV, LONDON)
         .observeOn(AndroidSchedulers.mainThread())
         .subscribeOn(Schedulers.io())
         .subscribe(

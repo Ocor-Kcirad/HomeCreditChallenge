@@ -67,8 +67,8 @@ class WeatherDetailActivity : AppCompatActivity() {
     val weatherIcon = weather.weathers[0].getIconUri() ?: ""
     val humidity = getString(R.string.label_humidity_placeholder, weather.main.humidity)
     val pressure = getString(R.string.label_pressure_placeholder, weather.main.pressure)
-    val minTemp = weather.main.minTemp
-    val maxTemp = weather.main.maxTemp
+    val minTemp = getString(R.string.label_temperature_placeholder, weather.main.minTemp)
+    val maxTemp = getString(R.string.label_temperature_placeholder, weather.main.maxTemp)
     val weatherName = weather.weathers.getOrNull(0)?.main ?: "None"
     val windSpeed = getString(R.string.label_windspeed_placeholder, weather.wind?.speed ?: "0")
     val windDegree = weather.wind?.deg?.toFloatOrNull() ?: 0f
