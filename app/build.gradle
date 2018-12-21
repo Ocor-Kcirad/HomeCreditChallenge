@@ -14,6 +14,7 @@ android {
     versionName "3.3"
     vectorDrawables.useSupportLibrary = true
     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    buildConfigField("String", "OPEN_WEATHER_APP_ID", "4dd9f5cfb2b4db77be919ca7e7007163")
   }
   buildTypes {
     release {
