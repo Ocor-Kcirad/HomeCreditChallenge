@@ -37,5 +37,5 @@ object ApiClient {
         .map { it.weatherList }
 
     fun getCityWeatherData(cityId: String): Single<WeatherData> = service
-        .getCityWeatherData(cityId, APP_ID)
+        .getCityWeatherData(cityId, METRIC_UNITS, APP_ID)
 }
