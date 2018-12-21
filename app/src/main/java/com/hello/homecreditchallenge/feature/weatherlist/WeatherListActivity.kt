@@ -1,7 +1,6 @@
 package com.hello.homecreditchallenge.feature.weatherlist
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.hello.homecreditchallenge.R
@@ -22,12 +21,6 @@ class WeatherListActivity : AppCompatActivity() {
         .get(WeatherListViewModel::class.java)
 
     fab.setOnClickListener { sharedViewModel.loadCitiesWeatherData() }
-  }
-
-  override fun onCreateOptionsMenu(menu: Menu): Boolean {
-    val inflater = menuInflater
-    inflater.inflate(R.menu.menu_main, menu)
-    return super.onCreateOptionsMenu(menu)
   }
 
 }
