@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.hello.homecreditchallenge.R
 import com.hello.homecreditchallenge.model.WeatherData
-import kotlinx.android.synthetic.main.fragment_weather_list.*
+import kotlinx.android.synthetic.main.fragment_weather_list.recyclerView
 import org.jetbrains.anko.support.v4.toast
 
 class WeatherListFragment : Fragment(), CityWeatherAdapter.Delegate {
@@ -30,11 +30,16 @@ class WeatherListFragment : Fragment(), CityWeatherAdapter.Delegate {
             .of(activity!!)
             .get(WeatherListViewModel::class.java)
 
-        sharedViewModel.weathers.observe(this, Observer {
+      sharedViewModel
+          .weathers
+          .observe(this, Observer {
             toast("Success")
             adapter.setItems(it)
         })
-        sharedViewModel.errors.observe(this, Observer { toast(it.message.toString()) })
+
+      sharedViewModel
+          .errors
+          .observe(this, Observer { toast(it.message.toString()) })
     }
 
     override fun onClickWeatherData(data: WeatherData) {

@@ -9,7 +9,9 @@ import com.bumptech.glide.Glide
 import com.hello.homecreditchallenge.R
 import com.hello.homecreditchallenge.libs.openweathermaps.getIconUri
 import com.hello.homecreditchallenge.model.WeatherData
-import kotlinx.android.synthetic.main.item_city_weather.view.*
+import kotlinx.android.synthetic.main.item_city_weather.view.locationTextView
+import kotlinx.android.synthetic.main.item_city_weather.view.temperatureTextView
+import kotlinx.android.synthetic.main.item_city_weather.view.weatherIconImageView
 
 class CityWeatherAdapter(private val callback: Delegate) : RecyclerView.Adapter<CityWeatherAdapter.ViewHolder>() {
 

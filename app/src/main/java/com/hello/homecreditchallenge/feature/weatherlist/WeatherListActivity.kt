@@ -4,7 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.hello.homecreditchallenge.R
-import kotlinx.android.synthetic.main.activity_weather_list.*
+import kotlinx.android.synthetic.main.activity_weather_list.fab
+import kotlinx.android.synthetic.main.activity_weather_list.toolbar
 
 class WeatherListActivity : AppCompatActivity() {
 
