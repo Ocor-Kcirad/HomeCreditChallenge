@@ -3,7 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="label_temperature_placeholder">%s°</string>
   <string name="label_humidity_placeholder">Humidity: %s</string>
-    <string name="label_pressure_placeholder">Pressure: %sp</string>
+    <string name="label_pressure_placeholder">Pressure: %s p</string>
   <string name="label_windspeed_placeholder">WindSpeed: %s km/h</string>
     <string name="label_temperature">Temperature</string>
   <string name="label_locate_me">Locate Me</string>
